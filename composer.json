@@ -1,0 +1,14 @@
+{
+    "name": "bmilesp/bootstrap_extend",
+    "description": "Classes and helpers that extend CakePHP for a simple and powerful drop-in solution for Twitter Bootstrap",
+    "authors": [
+        {
+            "name": "bmilesp",
+            "email": "bmilesp@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    }
+}
