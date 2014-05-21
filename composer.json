@@ -8,7 +8,8 @@
         }
     ],
     "minimum-stability": "dev",
+    "type": "cakephp-plugin",
     "require": {
-
+        "composer/installers": "~1.0"
     }
 }
