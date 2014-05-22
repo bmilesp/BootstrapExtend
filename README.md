@@ -2,6 +2,10 @@
 
 A Simple Yet Configurable Drop-In Solution to Add Twitter Bootstrap to Your Project
 
+# Requirements
+
+CakePHP 2.1 => 2.2
+
 ---
 
 # Installation
