@@ -13,12 +13,12 @@ CakePHP 2.1 => 2.2
 
 _[Using [Composer](http://getcomposer.org/)]_
 
-[View on Packagist](https://packagist.org/packages/bmilesp/bootstrap_extend), and copy the json snippet for the latest version into your project's `composer.json`. Eg, v. 1.0.0 would look like this:
+[View on Packagist](https://packagist.org/packages/bmilesp/bootstrap_extend), and copy the json snippet for the latest version into your project's `composer.json`. Eg, v. 2.1.x-dev would look like this:
 
 ```javascript
 {
 	"require": {
-		"bmilesp/bootstrap_extend": ""2.1.x-dev"
+		"bmilesp/bootstrap_extend": "2.1.x-dev"
 	}
 }
 ```
