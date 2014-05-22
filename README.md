@@ -34,13 +34,13 @@ In your `Plugin` directory type:
 git clone -b master git://github.com/bmilesp/BootstrapExtend.git Upload
 ```
 
-### Enable plugin
+# Enable plugin
 
 Add following lines in yout app/Config/bootstrap.php file
 
 	CakePlugin::load('BootstrapExtend', array('bootstrap' => true));
 
-## Usage
+# Usage
 
 Add the following elements into your layout somewhere within the <head></head> tags:
 
