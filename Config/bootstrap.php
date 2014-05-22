@@ -13,7 +13,6 @@ Configure::write('BootstrapExtend.assets.css.pre-bootstrap', 'BootstrapExtend.pr
 Configure::write('BootstrapExtend.assets.css.bootstrap', 'BootstrapExtend.bootstrap');
 Configure::write('BootstrapExtend.assets.css.typeahead', 'BootstrapExtend.typeahead');
 
-
 //default multitoggle assets
 Configure::write('BootstrapExtend.autoAssets.css.multitoggle', 'BootstrapExtend.bootstrap-multitoggle');
 
