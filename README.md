@@ -45,8 +45,10 @@ Add following lines in yout app/Config/bootstrap.php file
 Add the following elements into your layout somewhere within the <head></head> tags:
 
 ```php
-	<?php echo $this->element('BootstrapExtend.layout_requirements/external_resources');
-	echo $this->element('BootstrapExtend.layout_requirements/external_resources_overrides'); ?>
+	<?php 
+		echo $this->element('BootstrapExtend.layout_requirements/external_resources');
+		echo $this->element('BootstrapExtend.layout_requirements/external_resources_overrides'); 
+	?>
 ```
 
 Add the following to the end of the layout before the </body> closing tag:
