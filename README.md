@@ -55,7 +55,7 @@ Add the following elements into your layout somewhere within the <head></head> t
 	?>
 ```
 
-Add the following to the end of the layout before the </body> closing tag:
+Add the following to the end of the layout before the body closing tag:
 
 ```php
 	<?php echo $this->element('BootstrapExtend.layout_requirements/ext_block'); ?>
