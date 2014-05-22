@@ -1,19 +1,15 @@
 <?php
 echo $this->Html->script(array(
-	'https://code.jquery.com/jquery-2.1.0.min.js',
-	//'https://code.jquery.com/ui/1.10.4/jquery-ui.js',
-	'BootstrapExtend.bootstrap.min',
-	'BootstrapExtend.typeahead.bundle',
-	'BootstrapExtend.handlebars-v1.3.0',
-	'jquery.tablesorter.min',
-	'BootstrapExtend.bootstrap-multiselect',
-	'BootstrapExtend.script',
-	'script'
+	Configure::read('BootstrapExtend.assets.jquery'),
+	Configure::read('BootstrapExtend.assets.bootstrap'),
+	Configure::read('BootstrapExtend.assets.typeahead_bundle'),
+	Configure::read('BootstrapExtend.assets.handlebars'),
+	Configure::read('BootstrapExtend.assets.bootstrap-multiselect'),
+	Configure::read('BootstrapExtend.assets.script')
 ));
 
 echo $this->Html->css(array(
-	'BootstrapExtend.pre-bootstrap',
-	'BootstrapExtend.bootstrap',
-	'BootstrapExtend.typeahead',
-	'styles'
+	Configure::read('BootstrapExtend.assets.css.pre-bootstrap'),
+	Configure::read('BootstrapExtend.assets.css.bootstrap'),
+	Configure::read('BootstrapExtend.assets.css.typeahead')
 ));
