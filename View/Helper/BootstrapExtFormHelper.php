@@ -183,6 +183,47 @@ class BootstrapExtFormHelper extends FormHelper {
 	}
 
 
+
+	/**
+	 * Creates file input widget.
+	 *
+	 * @param string $fieldName Name of a field, in the form "Modelname.fieldname"
+	 * @param array $options Array of HTML attributes.
+	 * @return string A generated file input.
+	 * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::file
+	 */
+	public function file($fieldName, $options = array()) {
+
+		if($options['type'] == 'imagePreview'){
+			if(empty($this->assetsAdded['jansy-bootstrap'])
+			){
+				$this->Html->css(Configure::read('BootstrapExtend.assets.css.jansy-bootstrap'), null, array('inline' => false));
+				$this->Html->script(Configure::read('BootstrapExtend.assets.jansy-bootstrap'), array('inline' => false));
+				$this->Html->script(Configure::read('BootstrapExtend.assets.holder'), array('inline' => false));
+				
+				$this->assetsAdded['jansy-bootstrap'] = true;
+			}
+
+			$options += array('secure' => true);
+			$secure = $options['secure'];
+			$options['secure'] = self::SECURE_SKIP;
+
+			$options = $this->_initInputField($fieldName, $options);
+			$field = $this->entity();
+
+			foreach (array('name', 'type', 'tmp_name', 'error', 'size') as $suffix) {
+				$this->_secure($secure, array_merge($field, array($suffix)));
+			}
+
+			//return $this->Html->useTag('file', $options['name'], array_diff_key($options, array('name' => '')));
+			return $this->_View->element('BootstrapExtend.bootstrap3/image_preview_file', array('options' => $options));
+		}
+			
+		return parent::file($fieldname, $options);
+	}
+
+
+
 	public function tagIsInvalid() {
 		$entity = $this->entity();
 		$model = array_shift($entity);
