@@ -195,13 +195,13 @@ class BootstrapExtFormHelper extends FormHelper {
 	public function file($fieldName, $options = array()) {
 
 		if($options['type'] == 'imagePreview'){
-			if(empty($this->assetsAdded['jansy-bootstrap'])
+			if(empty($this->assetsAdded['jasny-bootstrap'])
 			){
-				$this->Html->css(Configure::read('BootstrapExtend.assets.css.jansy-bootstrap'), null, array('inline' => false));
-				$this->Html->script(Configure::read('BootstrapExtend.assets.jansy-bootstrap'), array('inline' => false));
+				$this->Html->css(Configure::read('BootstrapExtend.assets.css.jasny-bootstrap'), null, array('inline' => false));
+				$this->Html->script(Configure::read('BootstrapExtend.assets.jasny-bootstrap'), array('inline' => false));
 				$this->Html->script(Configure::read('BootstrapExtend.assets.holder'), array('inline' => false));
 				
-				$this->assetsAdded['jansy-bootstrap'] = true;
+				$this->assetsAdded['jasny-bootstrap'] = true;
 			}
 
 			$options += array('secure' => true);

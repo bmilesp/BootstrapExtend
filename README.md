@@ -46,11 +46,17 @@ Add following lines in yout app/Config/bootstrap.php file
 
 # Usage
 
-Add the following elements into your layout somewhere within the <head></head> tags:
+Two elements need to be echoed into your layout before and after the default css and script blocks like so:
 
 ```php
 	<?php 
 		echo $this->element('BootstrapExtend.layout_requirements/external_resources');
+
+		//default script and css blocks
+		echo $this->fetch('css');
+		echo $this->fetch('script');
+		//end default script and css blocks
+
 		echo $this->element('BootstrapExtend.layout_requirements/external_resources_overrides'); 
 	?>
 ```
@@ -69,3 +75,12 @@ In your AppController, overload the Form Helper with the following:
 		'Form' => array('className' => 'BootstrapExtend.BootstrapExtForm'),
 	);
 ```
+
+View the BootstrapExtend.BootstrapExtFormHelper php file to see all the form elements available.
+
+## Todo
+
+Create a default layout and controller view to display all Form helper elements and functionality
+
+## Contributors
+[Brian Shepanek](https://github.com/brianshepanek)
