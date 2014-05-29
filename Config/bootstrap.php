@@ -7,14 +7,14 @@ Configure::write('BootstrapExtend.assets.typeahead_bundle', 'BootstrapExtend.typ
 Configure::write('BootstrapExtend.assets.handlebars', '//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js');
 Configure::write('BootstrapExtend.assets.bootstrap-multiselect', 'BootstrapExtend.bootstrap-multiselect');
 Configure::write('BootstrapExtend.assets.script', 'BootstrapExtend.script');
-Configure::write('BootstrapExtend.assets.jansy-bootstrap', '//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js');
+Configure::write('BootstrapExtend.assets.jasny-bootstrap', '//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js');
 Configure::write('BootstrapExtend.assets.holder','//cdnjs.cloudflare.com/ajax/libs/holder/2.3.1/holder.js');
 
 //layout_requirement assets css
 Configure::write('BootstrapExtend.assets.css.pre-bootstrap', 'BootstrapExtend.pre-bootstrap');
 Configure::write('BootstrapExtend.assets.css.bootstrap', '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css');
 Configure::write('BootstrapExtend.assets.css.typeahead', 'BootstrapExtend.typeahead');
-Configure::write('BootstrapExtend.assets.css.jansy-bootstrap', '//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css');
+Configure::write('BootstrapExtend.assets.css.jasny-bootstrap', '//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css');
 
 //default multitoggle assets
 Configure::write('BootstrapExtend.autoAssets.css.multitoggle', 'BootstrapExtend.bootstrap-multitoggle');
