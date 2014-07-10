@@ -103,3 +103,14 @@ input.ev-view {
 	box-shadow: none;
 
 }
+
+.form-group.form-group-original{
+	margin-bottom: 15px;
+}
+
+.form-control.form-control-original{
+	margin-bottom: 0px;
+}
+.error-message {
+	color: #a94442;
+}

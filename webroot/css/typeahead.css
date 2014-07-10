@@ -14,11 +14,7 @@ html {
   *overflow-x: hidden;
 }
 
-.container {
-  max-width: 750px;
-  margin: 0 auto;
-  text-align: center;
-}
+
 
 .tt-dropdown-menu,
 .gist {

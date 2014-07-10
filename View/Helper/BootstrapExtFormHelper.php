@@ -259,6 +259,7 @@ class BootstrapExtFormHelper extends FormHelper {
  * 
  */
 	public function formInput($fieldName, $options = array(), $input = null){
+
 		$this->setEntity($fieldName);
 
 		$options = array_merge(
@@ -465,6 +466,10 @@ class BootstrapExtFormHelper extends FormHelper {
 				case 'url':
 					$input = $this->text($fieldName, array('type' => 'url') + $options);
 				break;
+				case 'button_group':
+					$input = $this->buttonGroup($fieldName, $options, $label);
+					
+				break;
 				default:
 					$input = $this->{$type}($fieldName, $options);
 			}
@@ -497,6 +502,59 @@ class BootstrapExtFormHelper extends FormHelper {
 		return $output;
 	}
 
+	public function buttonGroup($fieldName, $options = array(), $label = null){
+		$input_data = $this->_initInputField($fieldName);
+
+		$type = 'radio';
+		if(isset($options['multiple']) && $options['multiple'] === true){
+			$type = 'checkbox';
+		}
+		if(sizeof($options['options']) > 0 && sizeof($options['options']) <= 5){
+			$orientation = 'btn-group btn-group-justified';
+		} elseif(sizeof($options['options']) > 5 && sizeof($options['options']) <= 8){
+			$orientation = 'btn-group-vertical btn-block';
+		}
+		$html = '<div class="form-group">';
+			$html .= $label;
+			$html .= '<div class="' . $orientation . '" data-toggle="buttons">';
+				foreach ($options['options'] as $key => $option) {
+					$active = false;
+					$fieldCheck = str_replace($this->model(), '', $fieldName);
+					$fieldCheck = str_replace('.', '', $fieldCheck);
+					$active = false;
+					if(isset($this->request->data[$this->model()][$fieldCheck]) && $this->request->data[$this->model()][$fieldCheck] == $key){
+						$active = true;
+					}
+					//debug($this->request->data[$this->model()]);
+					/*
+					if(isset($this->request->data[$this->model()][$fieldName])){
+						$check_options = array();
+						foreach ($this->request->data[$this->model()][$fieldName] as $field_key => $field_name) {
+							$check_options[] = trim($field_name);;
+						}
+						$active = in_array($key, $check_options) ? true : false;
+					} elseif(isset($this->request->query[$fieldName])){
+						$check_options = array();
+						foreach ($this->request->query[$fieldName] as $field_key => $field_name) {
+							$check_options[] = trim($field_name);;
+						}
+						$active = in_array($key, $check_options) ? true : false;
+					}
+					*/
+					$active_class = $active ? 'active' : null;
+					$active_checked = $active ? 'checked' : null;
+					$html .= '<label class="btn btn-default ' . $active_class .'">';
+						$name_array = $this->_name();
+						//debug(array_shift($name_array));
+						$html .= '<input id="' . $input_data['id'] .'" name="' . array_shift($name_array) . '" type="' . $type . '" value="' . $key . '" ' . $active_checked . '> ' . $option;
+						$html .= '<span class="pull-right glyphicons ok_2 checkmark"></span>';
+					$html .= '</label>';
+				}
+			$html .= '</div>';
+		$html .= '</div>';
+		
+		return $html;
+	}
 
 
 	/*
