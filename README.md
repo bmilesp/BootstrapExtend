@@ -14,7 +14,7 @@ _[Using [Composer](http://getcomposer.org/)]_
 ```javascript
 {
 	"require": {
-		"bmilesp/bootstrap_extend": ""2.1.x-dev"
+		"bmilesp/bootstrap_extend": ""2.6.x-dev"
 	}
 }
 ```
