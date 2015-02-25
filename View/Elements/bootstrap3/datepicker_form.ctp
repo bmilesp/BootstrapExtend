@@ -9,7 +9,7 @@
 	$value = !empty($options['value'])  ? date('Y-m-d h:i:s.u',$options['value']) : 0;
 	//debug($options);
 	if(!empty($value)){
-		$date = new DateTime('2012-07-08 11:14:15.638276');
+		$date = new DateTime($value);
 		$value = $date->format('m/d/Y');
 	}
 ?>
