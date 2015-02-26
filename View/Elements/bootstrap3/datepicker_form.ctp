@@ -6,10 +6,12 @@
 
 	//add styles to calendar button if read only
 	$styles = !empty($options['readonly'])? 'cursor:not-allowed' : null;
-	$value = !empty($options['value'])  ? date('Y-m-d h:i:s.u',$options['value']) : 0;
+	$value = !empty($options['value'])? $options['value'] : 0;
 	//debug($options);
-	if(!empty($value)){
-		$date = new DateTime($value);
+	if(!empty($options['empty']) && empty($value)){
+		$value = null;
+	}else if(!empty($value)){
+		$date = new DateTime(date('Y-m-d h:i:s.u',$value));
 		$value = $date->format('m/d/Y');
 	}
 ?>
