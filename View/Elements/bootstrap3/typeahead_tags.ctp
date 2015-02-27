@@ -1,5 +1,10 @@
 <?php  
 
+if(empty($options['prefetchPath']) &&empty($options['remote']) && empty($options['local'])){
+	$options['ttl'] = 0;
+	$options['prefetchPath'] = '/';
+}
+
 //selected value
 if(empty($args['name']['value'])){
 	$value = !empty($this->request->data[$fieldNameParts['model']][$fieldNameParts['field']])? $this->request->data[$fieldNameParts['model']][$fieldNameParts['field']] : null;
