@@ -1,7 +1,11 @@
 <?php  
 
 //selected value
-$value = !empty($this->request->data[$fieldNameParts['model']][$fieldNameParts['field']])? $this->request->data[$fieldNameParts['model']][$fieldNameParts['field']] : null;
+if(empty($args['name']['value'])){
+	$value = !empty($this->request->data[$fieldNameParts['model']][$fieldNameParts['field']])? $this->request->data[$fieldNameParts['model']][$fieldNameParts['field']] : null;
+}else{
+	$value = $args['name']['value'];
+}
 
 //optional tooltip help
 $tooltipHelp = !empty($options['tooltipHelp'])? $options['tooltipHelp'] : null;
