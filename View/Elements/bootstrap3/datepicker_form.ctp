@@ -7,10 +7,10 @@
 	//add styles to calendar button if read only
 	$styles = !empty($options['readonly'])? 'cursor:not-allowed' : null;
 	$value = !empty($options['value'])? $options['value'] : 0;
-	//debug($options);
 	if(!empty($options['empty']) && empty($value)){
 		$value = null;
 	}else if(!empty($value)){
+		$value = !is_numeric($value) ? strtotime($value) : $value;
 		$date = new DateTime(date('Y-m-d h:i:s.u',$value));
 		$value = $date->format('m/d/Y');
 	}
