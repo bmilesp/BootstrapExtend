@@ -6,6 +6,7 @@ function modalBlank($html){
 	$('#modal-blank-template').modal('show');
 }
 //Modal Edit
+$(document).ready(function(){
 	$('body').on('click', '.modal-edit',function(e){
 
 		modalBlank('');
@@ -62,3 +63,4 @@ function modalBlank($html){
         e.preventDefault();
         return false;
     });
+});
