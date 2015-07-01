@@ -5,7 +5,8 @@ echo $this->Html->script(array(
 	Configure::read('BootstrapExtend.assets.typeahead_bundle'),
 	Configure::read('BootstrapExtend.assets.handlebars'),
 	Configure::read('BootstrapExtend.assets.bootstrap-multiselect'),
-	Configure::read('BootstrapExtend.assets.script')
+	Configure::read('BootstrapExtend.assets.script'),
+	Configure::read('BootstrapExtend.assets.modal')
 ));
 
 echo $this->Html->css(array(
