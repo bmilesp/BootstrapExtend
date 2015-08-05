@@ -16,7 +16,7 @@
 	}
 ?>
 <div class="form-group">
-    <div class='input-group date' id='datetimepicker_<?php echo $inputVals['id'] ?>'>
+    <div class='input-group date <?php echo $inputVals['input_wrapper_class'] ?>' id='datetimepicker_<?php echo $inputVals['id'] ?>'>
         <input data-date-format="mm/dd/yyyy" type='text' <?php echo $options['readonly']; ?> class="<?php echo $options['class'] ?>" name="<?php echo $inputVals['name'] ?>" value='<?php echo $value ?>'/>
         <span class="input-group-addon" style='<?php echo $styles?>'><span class="glyphicon glyphicon-calendar" style='<?php echo $styles?>'></span>
         </span>
