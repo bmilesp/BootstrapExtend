@@ -30,3 +30,6 @@ Configure::write('BootstrapExtend.autoAssets.js.bootstrap-select', 'BootstrapExt
 Configure::write('BootstrapExtend.autoAssets.css.tagsinput', 'BootstrapExtend.bootstrap-tagsinput');
 Configure::write('BootstrapExtend.autoAssets.css.tagsinput-extend', 'BootstrapExtend.bootstrap-tagsinput-extend');
 Configure::write('BootstrapExtend.autoAssets.js.tagsinput', 'BootstrapExtend.bootstrap-tagsinput.min');
+
+//default modal assets
+Configure::write('BootstrapExtend.assets.modal', 'BootstrapExtend.modal');
