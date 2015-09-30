@@ -1,6 +1,7 @@
 <?php
 echo $this->Html->script(array(
 	Configure::read('BootstrapExtend.assets.jquery'),
+	Configure::read('BootstrapExtend.assets.jquery-ui'),
 	Configure::read('BootstrapExtend.assets.bootstrap'),
 	Configure::read('BootstrapExtend.assets.typeahead_bundle'),
 	Configure::read('BootstrapExtend.assets.handlebars'),
