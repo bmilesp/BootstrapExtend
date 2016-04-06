@@ -1,15 +1,18 @@
 function loading($action){
 	$('#modal-loading').modal($action);
 }
-function modalBlank($html){
+function modalBlank($html,$modal_size){
+	if($modal_size == 'lg'){
+		$('#modal-blank-template .modal-dialog').addClass('modal-lg');	
+	}
 	$('#modal-blank-template .modal-content').html($html);
 	$('#modal-blank-template').modal('show');
 }
 //Modal Edit
 $(document).ready(function(){
 	$('body').on('click', '.modal-edit',function(e){
-
-		modalBlank('');
+		modal_size = $(this).data('modal-size');
+		modalBlank('', modal_size);
 		loading('show');
 
 		//Vars

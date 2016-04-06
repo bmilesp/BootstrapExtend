@@ -1,7 +1,7 @@
 <?php
 
 //layout_requirement assets js
-Configure::write('BootstrapExtend.assets.jquery', 'https://code.jquery.com/jquery-2.1.0.min.js');
+Configure::write('BootstrapExtend.assets.jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js');
 Configure::write('BootstrapExtend.assets.jquery-ui','//code.jquery.com/ui/1.11.4/jquery-ui.js');
 Configure::write('BootstrapExtend.assets.bootstrap', 'BootstrapExtend.bootstrap.min');
 Configure::write('BootstrapExtend.assets.typeahead_bundle', 'BootstrapExtend.typeahead.bundle');
