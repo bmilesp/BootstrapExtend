@@ -2,7 +2,7 @@
 
 //layout_requirement assets js
 Configure::write('BootstrapExtend.assets.jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js');
-Configure::write('BootstrapExtend.assets.jquery-ui','//code.jquery.com/ui/1.11.4/jquery-ui.js');
+Configure::write('BootstrapExtend.assets.jquery-ui','https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js');
 Configure::write('BootstrapExtend.assets.bootstrap', 'BootstrapExtend.bootstrap.min');
 Configure::write('BootstrapExtend.assets.typeahead_bundle', 'BootstrapExtend.typeahead.bundle');
 Configure::write('BootstrapExtend.assets.handlebars', 'BootstrapExtend.handlebars-v1.3.0');
